@@ -1,0 +1,21 @@
+1- false means the laptop does not have a dedicated GPU (gpu = false), and true means it has a backlit keyboard (backlitKeyboard = true)
+2- It does not compile because of a constructor signature clash (duplicate method error).
+Java differentiates overloaded constructors and methods based on their parameter types and order, not their parameter names
+6- When you run the code, you will observe that both printed quotes contain both services ([Setup, Extended warranty]), even though "Extended warranty" was only explicitly added to SAFI Amal's quote
+8- yes beacause a Singleton ensures that all parts of the application share the exact same registry state and standard presets globally
+and no because it introduces tight coupling and makes unit testing difficult
+9-
+a. Builder
+It cleanly constructs complex objects with many optional parameters
+
+b. Prototype
+It allows cloning existing objects directly without coupling the client code to their specific concrete classes.
+
+c. Singleton
+It ensures a class has only one global instance
+
+d. Factory Method
+It defines an interface for creating an object
+
+e. Abstract Factory
+It produces consistent families of related objects

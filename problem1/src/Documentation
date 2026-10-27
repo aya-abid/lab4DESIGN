@@ -1,0 +1,8 @@
+1- the code mistakenly instantiates MySqlDialect instead of SqlServerDialect, A real SQL Server would throw a syntax error because it does not understand the LIMIT keyword (SQL Server expects SELECT TOP n right after SELECT).
+2- if the code adds those methods it will violate the DRY, by repeating the if else statement in each method
+5- the bug no longer happens because we eliminated the manual instantiation and branching
+7- This demonstrates the power of the Open/Closed Principle and the Abstract Factory pattern.
+Because ReportDao, DatabaseFactory, DbConnection, and SqlDialect depend entirely on abstractions rather than concrete classes,
+you can introduce an entirely new database vendor (Oracle) simply by implementing the existing interfaces.
+8- Adding a third product (SqlEscaper) requires editing all 7 existing interface and concrete factory files
+Additionally, we need to create the new product interface and concrete classes
